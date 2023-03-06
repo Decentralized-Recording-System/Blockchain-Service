@@ -1,0 +1,15 @@
+{
+  "name": "blockchain",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ganache-cli --account \"0x60990d109319b975595a0cd9b74823aac59b23654ff61bb0322add2eb6f3cf46,9000000000000000000000\" --account \"0x4a6f4e8be3e818696e684f8e21f7614823846f1a260c1e3b150e0d3f1d9f4454,9000000000000000000000\"  --account \"0x3a0290b9956d1c347762232101ebc6b72ed2e500b56c5a8fe9fc80137ec900d2,9000000000000000000000\" --account \"0x01b673515bb22494da546f882fce132ebfab5d8d53ae2e7a9e7cc04d9729a551,9000000000000000000000\" --account \"0x3d54b4c6b3caaf71f11fdb2a0af6981d1ca386827cd3c2a2f852ad9328330c76,9000000000000000000000\" --account \"0x29f674b9736e4874ec6a76d7e1fe1a0ac35c1537afbba1851aa2749662d8b439,9000000000000000000000\" --account \"0x6a1867580c779fb59fc59e5f02e4cb6d25494fd0a2c4876a368b104a16a27557,9000000000000000000000\" --db ./ganache_data"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ganache-cli": "~6.12.2"
+  }
+}
