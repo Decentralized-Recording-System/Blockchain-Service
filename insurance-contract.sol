@@ -1,11 +1,12 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity >=0.7.0 <0.9.0;
 
-contract DRS_DATA_STORE {
+contract INSURANCE_CONTRACT {
     struct ContractData {
         address user;
         address company;
         uint256 contractValue;
+        string contractData;
         string start;
         string expire;
     }
