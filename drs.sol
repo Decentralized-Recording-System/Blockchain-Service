@@ -123,7 +123,7 @@ contract DRS_DATA_STORE {
 
     function companyGetUserDrivingData(address user) public view returns (DrivingData[] memory){
         require(
-            !_companySetAddress.is_in[msg.sender],
+            _companySetAddress.is_in[msg.sender],
             "Error address is in company address"
         );
         return users[user].data;

@@ -3,8 +3,7 @@ pragma solidity >=0.7.0 <0.9.0;
 
 contract INSURANCE_CONTRACT {
     struct ContractData {
-        address user;
-        address company;
+        string contractId;
         uint256 contractValue;
         string contractData;
         string start;
@@ -60,12 +59,11 @@ contract INSURANCE_CONTRACT {
         return "Succeed";
     }
 
-    function createContract(ContractData memory _data)
-        public
+    function createContract(ContractData memory _data) public
         returns (string memory)
     {
         require(
-            !_companySetAddress.is_in[msg.sender],
+            _companySetAddress.is_in[msg.sender],
             "Error address is in company address"
         );
         companies[msg.sender].data.push(_data);
@@ -75,7 +73,7 @@ contract INSURANCE_CONTRACT {
 
     function getAllContract() public view returns (ContractData[] memory) {
         require(
-            !_companySetAddress.is_in[msg.sender],
+            _companySetAddress.is_in[msg.sender],
             "Error address is in company address"
         );
         return companies[msg.sender].data;
